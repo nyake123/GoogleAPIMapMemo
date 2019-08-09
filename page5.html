@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="initial-scale=1.0, user-scalable=yes">
+<title>GoogleMapAPIテスト</title>
+<link rel="stylesheet" href="style2.css">
+</head>
+<body>
+<script src="jquery-3.3.1.min.js"></script>
+<div class="adbox1">
+</div>
+<div class="box1">
+GoogleAPIキー <input type="text" name="GoogleApiKeyTextBox" id="GoogleApiKey1">
+<button type="button" name="SetGoogleApiKey" value="SetGoogleApiKey" onclick="SetGoogleApiKey()" style="margin-left:10px; margin-top:10px;">GoogleAPIキーセット</button>
+</div>
+
+<div class="box2">モード:<span name="ModeText" id="ModeText1"></span></div>
+
+<div class="box3">入力エリア<br>
+<textarea rows="3" cols="50" id="MarkerInput1" name="MarkerInput"></textarea>
+</div>
+
+<div class="box4">
+<br><br><br>
+<button type="button" name="ImportMarker" value="ImportMarker" style="margin-left:10px" onclick="ImportMarker()">インポート</button>
+</div>
+
+<div class="box5" id="map" style="margin-top:10px; width:400px; height:350px;">
+</div>
+
+
+
+<div class="box6">
+<span style="margin-left:10px">マーカフィルタ</span><br>
+<span style="margin-left:10px">キーワード:</span><br>
+<span style="margin-left:10px"><input type="text" name="MarkerKeyTextBox" id="MarkerFilter1"></span><br>
+<span style="margin-left:10px"><button type="button" name="SearchMarker" value="SearchMarker" onclick="SearchMarker()" style="margin-left:10px; margin-top:10px;">フィルタ</button></span><br>
+<span style="margin-left:10px;">マーカー一覧<br></span>
+<p id="SumahoOut1"></p><br>
+<select size="9" id="MarkerList1" name="MarkerList" style="font-size:40px; border:1px; width: 130px; margin-left:10px; margin-top:10px;">
+</select><br>
+<span style="margin-left:10px"><button type="button" id="SumahoBtn1" name="SelectMarkerOnSumaho" value="SelectMarkerOnSumaho" onclick="SelectMarkerOnSumaho()" style="margin-left:10px; margin-top:10px; display:none;">選択</button></span><br>
+<span style="margin-left:10px"><button type="button" name="OpenMarkers" value="OpenMarkers" onclick="OpenMarkers()" style="margin-left:10px; margin-top:10px;">結果メモオープン</button></span><br>
+<span style="margin-left:10px"><button type="button" name="ShiftMarkerToTop" value="ShiftMarkerToTop" onclick="ShiftMarkerToTop()" style="margin-left:10px; margin-top:10px;">現在のマーカーをリストの先頭に</button></span><br>
+</div>
+
+<div class="box7">
+<span style="margin-left:10px; margin-top:10px;">マーカ登録/編集<br></span>
+<span style="margin-left:10px; margin-top:10px;">タイトル<br></span>
+<span style="margin-left:10px"><input type="text" id="MarkerKeyTextBox1" name="MarkerKeyTextBox"></span><br>
+<span style="margin-left:10px; margin-top:10px;">メモ<br></span>
+<textarea rows="9" cols="13" id="Memo1" name="Memo" style="margin-left:10px; margin-top:10px;"></textarea>
+<br>
+<button type="button" id="btn1" name="SetMarker" value="SetMarker" style="margin-left:10px; margin-top:10px;" onclick="SetMarker()">マーカ登録</button>
+<br>
+<button type="button" id="btn2" name="DeleteMarker" value="DeleteMarker" style="margin-left:10px; margin-top:10px;" onclick="DeleteMarker()">マーカ削除</button>
+<br>
+<button type="button" id="btn3" name="ChangeMode" value="ChangeMode" style="margin-left:10px; margin-top:10px" onclick="ChangeMode()">モード切替</button>
+</div>
+
+
+<div class="box8">
+</div>
+
+<div class="box9">出力エリア<br>
+<textarea rows="3" cols="50" id="MarkerOutput1" name="MarkerOutput"></textarea>
+</div>
+
+<div class="box10">
+<br><br><br>
+<button type="button" id="btn4" name="OutputMarker" value="OutputMarker" style="margin-left:10px" onclick="OutputText()">テキスト出力</button><br>
+<button type="button" id="btn5" name="SetCenter" value="SetCenter" style="margin-left:10px; margin-top:10px" onclick="SetCenter()">現在位置を中心にセット</button><br>
+</div>
+
+<div class="box11">
+</div>
+
+<div class="adbox1">
+<br><br><br><br><br>
+<br><br><br><br><br>
+</div>
+<div id="InitScriptTag"></div>
+<script type="text/javascript" src="sample5.js" async defer>
+</script>
+
+</body>
+</html>
